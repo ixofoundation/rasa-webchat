@@ -12,3 +12,5 @@ module
 
 # Test files
 coverage
+#VS Code Settings
+.vscode
