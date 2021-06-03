@@ -15,4 +15,4 @@ coverage
 #VS Code Settings
 .vscode
 *.pyc
-settings.json
+.vscode/settings.json
