@@ -22,6 +22,22 @@ DID_VALID_IXO_NOTVALID = Tracker.from_dict(
     json.load(open(here / "./data/did_valid_ixo_notvalid.json"))
     )
 
+VOTING_BOND_EMPTY_TRACKER = Tracker.from_dict(
+    json.load(open(here / "./data/voting_bond_empty_tracker.json"))
+)
+
+VOTING_BOND_INVALID_CHAIN_VALID_BOND = Tracker.from_dict(
+    json.load(open(here/ "./data/voting_bond_invalid_chain_valid_bond.json"))
+)
+
+VOTING_BOND_VALID_CHAIN_INVALID_BOND = Tracker.from_dict(
+    json.load(open(here/ "./data/voting_bond_valid_chain_invalid_bond.json"))
+)
+
+VOTING_BOND_VALID_CHAIN_VALID_BOND = Tracker.from_dict(
+    json.load(open(here/ "./data/voting_bond_valid_chain_valid_bond.json"))
+)
+
 @pytest.fixture
 def dispatcher():
     return CollectingDispatcher()

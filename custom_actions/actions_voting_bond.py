@@ -29,7 +29,7 @@ class ActionVotingBond(Action):
                     response = sess.get(URL)
                     status = response.status_code
                     if status == 200:
-                        state = response.json().get('state')
+                        state = response.json().get('result', {}).get('value', {}).get('state')
                         dispatcher.utter_message(f'Bond State for Bond DID {bond_did} : {state}')
                         return [SlotSet('bond_state', state)]
                     else:
