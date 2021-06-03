@@ -5,7 +5,7 @@ from rasa_sdk.executor import CollectingDispatcher, Tracker
 from rasa_sdk.events import SlotSet, ActionExecuted, SessionStarted
 
 from tests.conftest import EMPTY_TRACKER, DID_VALID_IXO_VALID, DID_NOTVALID_IXO_VALID, DID_VALID_IXO_NOTVALID
-from actions import actions_didToAddr
+from custom_actions import actions_didToAddr
 
 
 async def test_run_empty_tracker(dispatcher, domain):
@@ -13,7 +13,7 @@ async def test_run_empty_tracker(dispatcher, domain):
     action = actions_didToAddr.ActionDIDToAddr()
     events = await action.run(dispatcher, tracker, domain)
     expected_events = None
-    expected_text = "Failed to find address"
+    expected_text = "This identity None was"
     assert dispatcher.messages[0]["text"][:22] == expected_text
     assert events == expected_events
     
@@ -41,6 +41,6 @@ async def test_run_did_valid_ixo_notvalid(dispatcher, domain):
     action = actions_didToAddr.ActionDIDToAddr()
     events = await action.run(dispatcher, tracker, domain)
     expected_events = None
-    expected_text = "Invalid Ixo Network"
+    expected_text = "The network was not found"
     assert dispatcher.messages[0]["text"] == expected_text
     assert events == expected_events

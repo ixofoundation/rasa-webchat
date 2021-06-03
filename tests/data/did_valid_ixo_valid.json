@@ -1,7 +1,7 @@
 {
   "sender_id": "someone",
   "slots": {
-      "ixoNetwork": "testnet",
+      "chainId": "testnet",
       "DID": "did:sov:CYCc2xaJKrp8Yt947Nc6jd",
       "accountAddress": null
   },

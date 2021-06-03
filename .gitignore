@@ -14,3 +14,5 @@ module
 coverage
 #VS Code Settings
 .vscode
+*.pyc
+settings.json

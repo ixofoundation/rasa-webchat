@@ -13,16 +13,16 @@ class ActionDIDToAddr(Action):
     async def run(
         self, dispatcher, tracker: Tracker, domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        """The custom action will take the ixoNetwork and DID from the chatbot slots and
+        """The custom action will take the chainId and DID from the chatbot slots and
             sets the accountAddress slot associated with DID in that network if exists
         """
         
-        ixoNetwork = tracker.get_slot('ixoNetwork')
+        chainId = tracker.get_slot('chainId')
         DID = tracker.get_slot('DID')
         accountAddress = None
         status = None
-        if ixoNetwork and DID:
-            URL = f'https://{ixoNetwork}.ixo.world/didToAddr/{DID}'
+        if chainId and DID:
+            URL = f'https://{chainId}.ixo.world/didToAddr/{DID}'
             
             with requests.session() as sess:
                 try:
@@ -35,6 +35,6 @@ class ActionDIDToAddr(Action):
                     else:
                         dispatcher.utter_message(f'Address for DID {DID} is not found')
                 except:
-                    dispatcher.utter_message("Invalid Ixo Network")
+                    dispatcher.utter_message("The network was not found")
         else:       
-            dispatcher.utter_message(f'Failed to find address because ixoNetwork is {ixoNetwork} and DID is {DID}')
+            dispatcher.utter_message(f'This identity {DID} was not found, or does not have an associated Account Address')
