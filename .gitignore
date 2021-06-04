@@ -12,3 +12,7 @@ module
 
 # Test files
 coverage
+#VS Code Settings
+.vscode
+*.pyc
+settings.json
