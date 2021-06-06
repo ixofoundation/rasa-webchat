@@ -1,0 +1,107 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: did_to_addr
+  examples: |
+    - find address for DID [did:sov:CYCc2xaJKrp8Yt947Nc6jd](DID)
+    - can i know account address DID [did:sov:CYCc2xaJKrp8Yt947Nc6jd](DID)
+    - i want to know address of DID [did:sov:CYCc2xaJKrp8Yt947Nc6jd](DID)
+    - tell me the address of DID [did:sov:CYCc2xaJKrp8Yt947Nc6jd](DID)
+    - fetch address of DID [did:sov:CYCc2xaJKrp8Yt947Nc6jd](DID)
+
+- intent: relayer_vote
+  examples: |
+    - voting bond from user [did:sov:CiPYfm8c83af2UraeDnNSk](user_did) to bond [did:ixo:49BSStn5nAwrfZwvGT6HFa](bond_did)
+    - perform voting bond to bond [did:ixo:49BSStn5nAwrfZwvGT6HFb](bond_did) from user [did:sov:CiPYfm8c83af2UraeDnNSf](user_did)
+    - voting bond from user [did:sov:CiPYfm8c83af2UraeDnNSb](user_did) to bond [did:ixo:49BSStn5nAwrfZwvGT6HFc](bond_did)
+    - perform voting bond to bond [did:ixo:49BSStn5nAwrfZwvGT6HFd](bond_did) from user [did:sov:CiPYfm8c83af2UraeDnNSc](user_did)
