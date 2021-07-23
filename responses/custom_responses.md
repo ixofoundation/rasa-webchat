@@ -86,7 +86,7 @@ In the current Client SDK implementation, it is only possible for a trigger to p
 ### Trigger types for `actions`
  * getActions
 
-#### Entity Values for `getActions`
+#### Additional Entity Values for `Actions`
 * "trigger":"getActions"
 * “page”:”<name of the current app page>”
 * “authenticated”:”true | false” // if the user is logged in
