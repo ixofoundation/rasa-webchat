@@ -40,7 +40,7 @@ send_message | Sends a message to another user through the DID-Comm protocol (fu
 Each Custom Response Trigger can perform functions of different types. 
 In the current Client SDK implementation, it is only possible for a trigger to perform one type of function in a response. Multiple functions can be implemented through multiple sequential responses.
 
-### Trigger types for `proto_msg`
+#### Trigger types for `proto_msg`
  * cosmos-sdk/MsgSend
  * cosmos-sdk/MsgMultiSend
  * cosmos-sdk/MsgCreateValidator
